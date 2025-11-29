@@ -20,6 +20,7 @@ public class GameEngine {
         actions.add(new SailAction());
         actions.add(new RestAction());
     }
+
     private void checkGameOver(){
         if(!pirate.isAlive()) {
             if (pirate.getGold() <= 0) {
@@ -32,11 +33,13 @@ public class GameEngine {
             gameOver = true;
         }
     }
+
     public void showDayHeader(int day){
         System.out.println("\n-------------------------------------------");
         System.out.println("Day " + day);
         System.out.println("-------------------------------------------");
     }
+
     public int readChoice(int min, int max){
         int choice;
         Scanner input = new Scanner(System.in);
@@ -76,7 +79,7 @@ public class GameEngine {
     }
     public void showGameEnd(){
         System.out.println("\n===========================================");
-        System.out.println("GAME OVER");
+        System.out.println("GAME OVER!");
         System.out.println("===========================================");
         System.out.println("You lasted " + (day - 1) + " days.");
     }
