@@ -19,6 +19,7 @@ public class GameEngine {
         actions.add(new HuntAction());
         actions.add(new SailAction());
         actions.add(new RestAction());
+        actions.add(new TradeAction());
     }
 
     private void checkGameOver(){
@@ -55,6 +56,7 @@ public class GameEngine {
         return choice;
     }
     public void playTurn(){
+        Market.generatePrices();
         showDayHeader(day);
         pirate.showResources();
         System.out.println();
